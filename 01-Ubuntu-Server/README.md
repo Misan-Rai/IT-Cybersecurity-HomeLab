@@ -27,6 +27,22 @@ I then booted the laptop from the USB using the HP boot menu (Esc followed by F9
 
 For the installation, I've chosen the standard Ubuntu Server option.
 
+### Setting Up SSH
+
+During the Ubuntu installation, I selected the option to install OpenSSH Server.
+
+I want to be able to manage my HP Pavilion from my main Windows PC without having to use the laptop directly every time.
+
+For now, I've enabled password authentication. Once I've got everything working, I'll look into using SSH keys for better security.
+
+I haven't tested SSH yet because I still need to get the server connected to Wi-Fi.
+
+**Next steps:**
+- Get Ubuntu connected to my home network.
+- Find the server's local IP address.
+- Connect to the server from my Windows PC using SSH.
+- Set up SSH key authentication.
+
 ### Storage Setup
 
 I'm planning to use the laptop's entire 512GB SSD since I won't be using its previous operating system anymore.
