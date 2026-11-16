@@ -1,56 +1,71 @@
 # Ubuntu Home Server
 
-## Project Overview
+## About the Project
 
-I'm repurposing my old HP Pavilion laptop into a dedicated Linux server as part of my IT and cybersecurity home lab.
+I've got an old HP Pavilion laptop that I no longer use, so I decided to turn it into a home server rather than leave it sitting around.
 
-The aim is to learn how to install, configure, manage and troubleshoot a Linux server, while eventually hosting useful services on my home network.
+I'm currently learning IT and cybersecurity, and I thought building my own server would be a good way to get some hands-on experience with Linux, networking and managing different services.
+
+My plan is to use this laptop to run things like Docker, Pi-hole and monitoring tools. I'll be documenting the setup here, including anything that goes wrong along the way.
 
 ## Hardware
 
-| Component | Details |
-| --- | --- |
-| Device | HP Pavilion 14-ce3606sa |
+| Equipment | Details |
+|---|---|
+| Laptop | HP Pavilion 14-ce3606sa |
 | RAM | 8GB |
-| Storage | 512GB |
-| Network | Virgin Media Hub 5 |
-| Connection | Wi-Fi initially, Ethernet planned |
+| Storage | 512GB Intel SSD |
+| Operating system | Ubuntu Server LTS (installation in progress) |
+| Router | Virgin Media Hub 5 |
+| Network | Wi-Fi |
 
-## Project Goals
+## Setting Up Ubuntu Server
 
-- Install Ubuntu Server LTS
-- Configure SSH for remote administration
-- Set up a stable local IP address
-- Learn Linux users, permissions and system management
-- Install Docker and deploy services
-- Configure DNS filtering with Pi-hole
-- Set up monitoring and backups
+I downloaded Ubuntu Server and used Rufus to create a bootable USB drive.
 
-## Installation Progress
+I then booted the laptop from the USB using the HP boot menu (Esc followed by F9).
 
-- [x] Checked laptop hardware and storage
-- [x] Confirmed UEFI boot mode
-- [x] Checked the existing network connection
-- [x] Backed up important files
-- [x] Create bootable Ubuntu Server USB
-- [x] Install Ubuntu Server
-- [ ] Configure SSH
-- [ ] Configure network settings
+For the installation, I've chosen the standard Ubuntu Server option.
+
+### Storage Setup
+
+I'm planning to use the laptop's entire 512GB SSD since I won't be using its previous operating system anymore.
+
+I've also selected LVM (Logical Volume Manager). From what I've learned so far, LVM makes it easier to manage and resize storage volumes later on.
+
+The storage changes haven't been confirmed yet.
+
+## Problems I've Run Into
+
+### Installer crashing
+
+My first attempt at installing Ubuntu didn't go to plan.
+
+While I was setting up the Wi-Fi connection, the installer crashed and displayed an error report. I tried restarting the laptop, but it got stuck on the rebooting screen, so I had to shut it down manually.
+
+On my second attempt, I skipped the Wi-Fi setup and managed to get past the point where it previously crashed.
+
+I'm still not sure exactly what caused the issue. I'll update this once the installation is finished.
+
+I've also recorded the issue in my [troubleshooting notes](troubleshooting.md).
+
+## Progress
+
+- [x] Checked the laptop's hardware
+- [x] Created a bootable Ubuntu Server USB
+- [x] Booted into the Ubuntu installer
+- [x] Selected the standard Ubuntu Server installation
+- [x] Got past the previous installer crash
+- [ ] Finish installing Ubuntu Server
+- [ ] Configure Wi-Fi
+- [ ] Set up SSH for remote access
 - [ ] Install Docker
-- [ ] Deploy first service
+- [ ] Deploy my first service
 
-## Configuration
+## What I've Learned
 
-I'll add important commands, configuration details and explanations here as I work through the installation.
+So far, I've learned how to create a bootable USB, boot a computer using UEFI and identify the correct disk during a Linux installation.
 
-## Testing and Verification
+I've also started learning about LVM and why it might be useful when managing storage on a server.
 
-I'll record how I tested connectivity, remote access and running services.
-
-## Troubleshooting
-
-I'll document any issues I encounter, what caused them and how I resolved them.
-
-## What I Learned
-
-I'll update this section as I complete each stage of the project.
+I'll keep updating this section as I work through the project.
