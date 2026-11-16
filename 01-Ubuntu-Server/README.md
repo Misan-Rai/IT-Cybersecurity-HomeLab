@@ -32,8 +32,8 @@ The aim is to learn how to install, configure, manage and troubleshoot a Linux s
 - [x] Confirmed UEFI boot mode
 - [x] Checked the existing network connection
 - [x] Backed up important files
-- [ ] Create bootable Ubuntu Server USB
-- [ ] Install Ubuntu Server
+- [x] Create bootable Ubuntu Server USB
+- [x] Install Ubuntu Server
 - [ ] Configure SSH
 - [ ] Configure network settings
 - [ ] Install Docker
