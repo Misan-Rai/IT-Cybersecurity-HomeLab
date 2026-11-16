@@ -43,6 +43,16 @@ I haven't tested SSH yet because I still need to get the server connected to Wi-
 - Connect to the server from my Windows PC using SSH.
 - Set up SSH key authentication.
 
+### First Boot
+
+Ubuntu Server has now been installed on my HP Pavilion.
+
+After removing the installation USB and restarting, the laptop booted into Ubuntu successfully. I logged into my account and ran `hostnamectl` to check the system information.
+
+The command displayed the server's hostname, operating system, kernel and architecture, confirming that Ubuntu was running.
+
+My next step is to connect the server to my home Wi-Fi so I can manage it remotely from my main PC.
+
 ### Storage Setup
 
 I'm planning to use the laptop's entire 512GB SSD since I won't be using its previous operating system anymore.
