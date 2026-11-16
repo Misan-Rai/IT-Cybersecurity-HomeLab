@@ -46,3 +46,23 @@ I'm keeping this as a reference while learning Linux through my Ubuntu Server ho
 - `systemctl` is used to manage and inspect Linux services.
 - I'm still learning how SSH authentication works.
 
+
+## SSH Session Commands
+
+| Command | What it does |
+|---|---|
+| `whoami` | Shows which user I'm logged in as |
+| `exit` | Closes my current shell session |
+| `ssh -v username@server-ip` | Connects through SSH and shows detailed connection information |
+
+### SSH Authentication
+
+SSH can use different methods to verify someone's identity.
+
+- Public key authentication uses cryptographic keys.
+- Password authentication uses the account password.
+- My SSH client attempted public key authentication before falling back to a password.
+- I successfully connected using my Ubuntu account password.
+
+I'm still learning how SSH keys work.
+
