@@ -27,9 +27,22 @@ I'm keeping this as a reference while learning Linux through my Ubuntu Server ho
 - An IP ping and a DNS lookup test different things.
 - `sudo` allows a command to run with administrative privileges.
 
-## Things I want to practise again
 
-- Identifying my Wi-Fi interface without guidance
-- Checking whether my server has an IP address
-- Troubleshooting a failed internet connection
-- Explaining what DNS does in my own words
+## SSH and System Administration
+
+| Command | What it does | When I'd use it |
+|---|---|---|
+| `systemctl status ssh --no-pager` | Checks the SSH service status | To see whether SSH is running |
+| `ssh username@server-ip` | Connects to another computer using SSH | To access Ubuntu from Windows |
+| `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub` | Displays the fingerprint of an SSH public host key | To verify the server's identity |
+| `uname -s` | Shows the kernel name | To confirm I'm using a Linux environment |
+
+### Things to remember
+
+- SSH stands for Secure Shell.
+- A running SSH service doesn't necessarily mean a remote connection will succeed.
+- Always verify a new server's host key fingerprint before trusting it.
+- Commands entered after an SSH login run on the remote server.
+- `systemctl` is used to manage and inspect Linux services.
+- I'm still learning how SSH authentication works.
+
