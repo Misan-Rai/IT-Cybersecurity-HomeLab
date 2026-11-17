@@ -119,3 +119,27 @@ with the server.
 - Relative paths start from the current directory.
 - Administrative privileges are only needed when the
   current user lacks the required permissions.
+## File Management
+
+| Command | What it does |
+|---|---|
+| `cat filename` | Displays the contents of a file |
+| `nano filename` | Opens a file in the Nano text editor |
+| `cp source destination` | Copies a file |
+| `mv source destination` | Moves or renames a file |
+| `rm -i filename` | Removes a file after asking for confirmation |
+
+### Nano Keyboard Shortcuts
+
+| Shortcut | Action |
+|---|---|
+| Ctrl + O | Save the file |
+| Enter | Confirm the filename |
+| Ctrl + X | Exit Nano |
+
+### Safety Notes
+
+- Create backups before editing important configuration files.
+- Check the destination before copying or moving files.
+- Files deleted using rm do not normally go to a recycle bin.
+- Check your current directory before deleting files.
