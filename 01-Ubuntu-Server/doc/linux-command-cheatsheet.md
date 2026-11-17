@@ -66,3 +66,28 @@ SSH can use different methods to verify someone's identity.
 
 I'm still learning how SSH keys work.
 
+## Package Management (APT)
+
+| Command | What it does |
+|---|---|
+| `sudo apt update` | Refreshes information about available packages and versions |
+| `sudo apt upgrade` | Installs available software upgrades |
+| `apt list --upgradable` | Lists packages with available upgrades |
+| `apt policy package-name` | Displays installed and available package versions |
+
+### Phased Updates
+
+Ubuntu sometimes rolls out updates gradually to reduce
+the risk of faulty updates affecting many systems.
+
+A phased update does not necessarily indicate a problem
+with the server.
+
+## Terminal Pager Controls
+
+| Key | Action |
+|---|---|
+| `q` | Exit the pager |
+| `Space` | Move down one page |
+| `g` | Go to the beginning |
+| `G` | Go to the end |
