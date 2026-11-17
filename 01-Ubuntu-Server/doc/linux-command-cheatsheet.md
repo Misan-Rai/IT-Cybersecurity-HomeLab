@@ -190,3 +190,16 @@ Owner, Group, Others.
 
 Least privilege means giving users only the permissions
 they need to perform their tasks.
+
+## Administrative Privileges
+
+`sudo` allows an authorised user to execute commands with
+elevated privileges, normally as the root user.
+
+Whether sudo is required depends on the permissions needed
+for a task, not the current working directory.
+
+The root user and the root directory (/) are different things.
+
+Only use sudo when necessary to reduce the risk of accidental
+system changes. This follows the principle of least privilege.
