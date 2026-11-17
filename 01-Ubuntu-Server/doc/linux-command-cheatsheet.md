@@ -143,3 +143,50 @@ with the server.
 - Check the destination before copying or moving files.
 - Files deleted using rm do not normally go to a recycle bin.
 - Check your current directory before deleting files.
+
+## File Permissions
+
+| Command | What it does |
+|---|---|
+| `ls -l` | Displays detailed file information, including permissions and ownership |
+| `chmod o-r filename` | Removes read permission from others |
+| `chmod g-w filename` | Removes write permission from the group |
+| `chmod u+x filename` | Adds execute permission for the owner |
+| `chmod 600 filename` | Gives only the owner read and write permissions |
+
+### Symbolic Permissions
+
+| Symbol | Meaning |
+|---|---|
+| u | Owner |
+| g | Group |
+| o | Others |
+| a | All |
+| + | Add permission |
+| - | Remove permission |
+| = | Set permissions |
+
+### Numerical Permissions
+
+| Value | Permission |
+|---|---|
+| 4 | Read |
+| 2 | Write |
+| 1 | Execute |
+| 0 | No permission |
+
+Numerical permissions follow the order:
+Owner, Group, Others.
+
+| Mode | Owner | Group | Others |
+|---|---|---|---|
+| 600 | rw- | --- | --- |
+| 644 | rw- | r-- | r-- |
+| 660 | rw- | rw- | --- |
+| 700 | rwx | --- | --- |
+| 755 | rwx | r-x | r-x |
+
+### Security Principle
+
+Least privilege means giving users only the permissions
+they need to perform their tasks.
