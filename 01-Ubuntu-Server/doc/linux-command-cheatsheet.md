@@ -91,3 +91,31 @@ with the server.
 | `Space` | Move down one page |
 | `g` | Go to the beginning |
 | `G` | Go to the end |
+
+## Files and Directory Navigation
+
+| Command | What it does |
+|---|---|
+| `pwd` | Displays the current working directory |
+| `ls` | Lists visible files and directories |
+| `ls -a` | Lists all entries, including hidden files |
+| `ls -d directory` | Displays the directory itself rather than its contents |
+| `cd directory` | Changes the current directory |
+| `cd ..` | Moves up one directory |
+| `cd ~` | Returns to the home directory |
+| `mkdir directory` | Creates a new directory |
+| `touch filename` | Creates an empty file or updates its timestamps |
+
+### Linux Paths
+
+| Symbol | Meaning |
+|---|---|
+| `/` | Root directory |
+| `~` | Home directory |
+| `.` | Current directory |
+| `..` | Parent directory |
+
+- Absolute paths start from the root directory.
+- Relative paths start from the current directory.
+- Administrative privileges are only needed when the
+  current user lacks the required permissions.
