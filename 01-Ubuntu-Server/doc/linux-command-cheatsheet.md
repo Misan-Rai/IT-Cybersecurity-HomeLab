@@ -203,3 +203,73 @@ The root user and the root directory (/) are different things.
 
 Only use sudo when necessary to reduce the risk of accidental
 system changes. This follows the principle of least privilege.
+
+## User and Group Management
+
+| Command | Purpose |
+|---|---|
+| `whoami` | Show the effective username |
+| `id username` | Show a user's UID, primary GID and group memberships |
+| `getent group` | List available groups |
+| `getent group groupname` | Look up a specific group |
+| `sudo groupadd groupname` | Create a group |
+| `sudo adduser --disabled-password username` | Create a user without password-based login |
+| `sudo usermod -aG groupname username` | Add a user to a supplementary group without removing existing memberships |
+
+### Important notes
+
+- UID = User ID.
+- GID = Group ID.
+- A user's primary group is shown by `gid=`.
+- `groups=` includes primary and supplementary memberships.
+- `getent group` may not list users who belong through their primary group.
+- `usermod -G` without `-a` can replace existing supplementary group memberships.
+
+## Ownership and Permissions
+
+| Command | Purpose |
+|---|---|
+| `ls -ld /srv/finance-team` | Inspect a directory's ownership and permissions |
+| `sudo chgrp finance-team /srv/finance-team` | Change the directory's group owner |
+| `sudo chmod 750 /srv/finance-team` | Set owner/group/others permissions |
+| `chmod g-w,o-r file.txt` | Remove group write and others' read permissions |
+
+### Permission Values
+
+- Read = 4
+- Write = 2
+- Execute = 1
+- Owner / Group / Others = three-digit permission notation
+
+Example: `750` = `rwxr-x---`
+
+For directories:
+- `r` allows listing entry names.
+- `w` and `x` together normally allow creating and deleting entries.
+- `x` allows entering or traversing a directory.
+
+Changing group ownership does not automatically change the permission bits.
+
+## Testing Access as Different Users
+
+| Command | Purpose |
+|---|---|
+| `sudo -u username -- whoami` | Run whoami as another user |
+| `sudo -u finance-trainee -- ls -a /srv/finance-team` | Test directory listing as the trainee |
+| `sudo -u finance-trainee -- touch /srv/finance-team/test.txt` | Test whether the trainee can create a file |
+
+`sudo -u` runs the command as the specified user. It does not give that user root privileges.
+
+A Permission denied result can be a successful security test when access is intentionally restricted.
+
+## Useful ls Options
+
+| Option | Meaning |
+|---|---|
+| `-a` | Include hidden entries |
+| `-l` | Long format with ownership and permissions |
+| `-d` | Inspect the directory itself |
+
+Examples:
+- `ls -la` — Detailed listing including hidden entries.
+- `ls -ld /srv/finance-team` — Detailed information about the directory itself.
